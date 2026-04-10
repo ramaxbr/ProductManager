@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class GerenciadorProdutos {
+public class GerenciadorProdutos{
     ArrayList<Produto> listarProduto = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -72,10 +72,32 @@ public class GerenciadorProdutos {
     }
 
 
-void listarProduto(){
-    for (Produto listar : listarProduto){
-        System.out.println(listar);
+    void listarProduto(){
+        for (Produto listar : listarProduto){
+            System.out.println(listar);
+        }
     }
-}
+
+     Object buscarProduto(String buscarNome){
+        for(Produto buscar : listarProduto){
+            if(buscar.getNome().toLowerCase().contains(buscarNome.toLowerCase())) {
+                System.out.println("Produto encontrado.");
+                return buscar;
+            }
+        }
+        System.out.println("Produto não encontrado.");
+        return null;
+    }
+
+
+ void atualizarProduto(){
+     System.out.println("Digite um nome para realizar a busca.");
+     String buscarNome = sc.nextLine();
+
+
+
+
+ }
+
 
 }

@@ -28,6 +28,7 @@ public class Main {
                     g.listarProduto();
                     break;
                 case 3:
+                    g.atualizarProduto();
                     break;
                 case 4:
                     break;
