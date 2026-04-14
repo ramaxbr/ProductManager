@@ -18,6 +18,7 @@ public class Main {
             System.out.println("4- Deletar.");
             System.out.println("0- Finalizar programa.");
              int opcaoMenu = sc.nextInt();
+
              sc.nextLine();
 
             switch (opcaoMenu) {
@@ -31,6 +32,7 @@ public class Main {
                     g.atualizarProduto();
                     break;
                 case 4:
+                    g.deletarProduto();
                     break;
                 case 0:
                     rodar = false;
